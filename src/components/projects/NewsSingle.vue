@@ -21,7 +21,7 @@ export default {
   >
     <div>
       <img
-        :src="'http://localhost:3030/' + news.image"
+        :src="'https://celine-chogan-backend.herokuapp.com/' + news.image"
         :alt="news.title"
         class="rounded-t-xl border-none"
       />

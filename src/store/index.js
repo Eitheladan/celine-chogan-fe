@@ -10,7 +10,7 @@ export default createStore({
         news: [],
         singleNews: [],
         singleNewsId: "",
-        url: 'http://localhost:3030/api',
+        url: 'https://celine-chogan-backend.herokuapp.com/api',
         login: false,
         user: [],
     },
