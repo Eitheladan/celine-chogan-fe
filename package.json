@@ -3,9 +3,9 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"start": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint"
+		"start": "node --max_old_space_size=2560 vue-cli-service serve",
+		"build": "node --max_old_space_size=2560 vue-cli-service build",
+		"lint": "node --max_old_space_size=2560 vue-cli-service lint"
 	},
 	"dependencies": {
 		"@tailwindcss/forms": "^0.3.3",
