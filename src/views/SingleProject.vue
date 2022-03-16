@@ -59,7 +59,7 @@ export default {
         <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
           <div class="mb-10 sm:mb-0">
             <img
-              :src="'http://localhost:3030/' + n.image"
+              :src="'https://celine-chogan-backend.herokuapp.com/' + n.image"
               :alt="n.title"
               class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
             />

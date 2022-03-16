@@ -160,7 +160,7 @@ export default {
               "
             >
               <img
-                :src="'http://localhost:3030/' + n.image"
+                :src="'https://celine-chogan-backend.herokuapp.com/' + n.image"
                 :alt="n.title"
                 class="rounded-t-xl border-none"
                 width="100"
