@@ -10,7 +10,8 @@ export default createStore({
         news: [],
         singleNews: [],
         singleNewsId: "",
-        url: 'https://celine-chogan-backend.herokuapp.com/api',
+        url: 'http://localhost:3030/',
+        // url: 'https://celine-chogan-backend.herokuapp.com/',
         login: false,
         user: [],
     },
@@ -29,14 +30,14 @@ export default createStore({
         getNewsAction({
             commit
         }) {
-            axios.get(this.state.url + '/news').then(res => {
+            axios.get(this.state.url + 'api/news').then(res => {
                 commit('getNews', res.data)
             })
         },
         getSingleNewsAction(id, {
             commit
         }) {
-            axios.get(this.state.url + '/news/' + id).then(res => {
+            axios.get(this.state.url + 'api/news/' + id).then(res => {
                 commit('getSingleNews', res.data)
             })
         },

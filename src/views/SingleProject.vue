@@ -12,7 +12,15 @@ export default {
   updated() {
     feather.replace();
   },
-  methods: {},
+  methods: {
+    formatDate(date) {
+      if (date) {
+        return date.slice(0, 10);
+      } else {
+        return "Undefined";
+      }
+    },
+  },
 };
 </script>
 
@@ -50,19 +58,30 @@ export default {
                   text-primary-dark
                   dark:text-primary-light
                 "
-                >La Date</span
+                >{{ formatDate(n.date) }}</span
               >
             </div>
           </div>
         </div>
-        <div>{{ n.description }}</div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-          <div class="mb-10 sm:mb-0">
+
+        <div class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
+          <div class="w-full sm:w-2/6 mb-7 sm:mb-0">
             <img
-              :src="'https://celine-chogan-backend.herokuapp.com/' + n.image"
+              :src="$store.state.url + n.image"
               :alt="n.title"
               class="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
             />
+          </div>
+          <div class="w-full sm:w-4/6 text-left">
+            <p
+              class="
+                font-general-regular
+                text-lg text-primary-dark
+                dark:text-primary-light
+              "
+            >
+              {{ n.description }}
+            </p>
           </div>
         </div>
       </div>

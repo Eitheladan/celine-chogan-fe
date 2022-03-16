@@ -9,11 +9,9 @@ export default {
   },
 
   mounted() {
-    axios
-      .get("https://celine-chogan-backend.herokuapp.com/api/news/")
-      .then((res) => {
-        this.news = res.data;
-      });
+    axios.get(this.$store.state.url + "/api/news/").then((res) => {
+      this.news = res.data;
+    });
   },
 };
 </script>

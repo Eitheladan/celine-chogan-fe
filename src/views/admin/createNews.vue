@@ -29,7 +29,7 @@ export default {
       formData.set("description", this.description);
       console.log(formData);
       try {
-        await axios.post("http://localhost:3030/api/news/create", formData);
+        await axios.post(this.$store.state.url + "/news/create", formData);
         this.message = "Actualité créé !!";
         this.selectedFile = "";
         this.title = "";

@@ -31,7 +31,7 @@ export default {
     // fonction pour supprimer une news
     deleteNews(id) {
       axios
-        .delete(this.$store.state.url + "/news/" + id)
+        .delete(this.$store.state.url + "api/news/" + id)
         .then(() => this.$router.push("/admin"))
         .catch();
     },
@@ -66,7 +66,15 @@ export default {
       </router-link>
     </div>
     <div>
-      <table class="table-fixed w-full">
+      <table
+        class="
+          table-fixed
+          center
+          w-4/5
+          text-primary-dark
+          dark:text-primary-light
+        "
+      >
         <thead>
           <tr class="bg-indigo-500 text-center">
             <th
@@ -103,7 +111,7 @@ export default {
             </th>
             <th
               class="
-                w-3/12
+                w-5/12
                 min-w-[160px]
                 text-lg
                 font-semibold
@@ -142,13 +150,13 @@ export default {
                 lg:py-7
                 px-3
                 lg:px-4
-                border-l border-transparent
+                border-l border-r border-transparent
               "
             ></th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="n in news" :key="n.id">
+          <tr v-for="n in $store.state.news" :key="n.id">
             <td
               class="
                 center
@@ -160,7 +168,7 @@ export default {
               "
             >
               <img
-                :src="'https://celine-chogan-backend.herokuapp.com/' + n.image"
+                :src="$store.state.url + n.image"
                 :alt="n.title"
                 class="rounded-t-xl border-none"
                 width="100"
@@ -229,7 +237,7 @@ export default {
                 py-5
                 px-2
                 bg-[#F3F6FF]
-                border-b border-l border-[#E8E8E8]
+                border-b border-l border-r border-[#E8E8E8]
               "
             >
               <button

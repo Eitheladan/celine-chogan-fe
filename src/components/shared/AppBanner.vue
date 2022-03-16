@@ -43,7 +43,7 @@ export default {
     <!-- Banner left contents -->
     <div class="w-full md:w-1/3 text-left">
       <img
-        style="height: 450px; margin-bottom: 35px"
+        style="height: 25%; margin-bottom: 35px"
         src="@/assets/images/emoj.png"
         alt="emoj"
       />
