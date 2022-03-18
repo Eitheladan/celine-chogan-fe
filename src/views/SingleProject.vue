@@ -1,7 +1,9 @@
 <script>
 import feather from "feather-icons";
+import Tiptap from "../components/reusable/Tiptap.vue";
 export default {
   name: "Projects",
+  components: { Tiptap },
   data() {
     return {};
   },
@@ -80,7 +82,7 @@ export default {
                 dark:text-primary-light
               "
             >
-              {{ n.description }}
+              <Tiptap :data="n.description" />
             </p>
           </div>
         </div>

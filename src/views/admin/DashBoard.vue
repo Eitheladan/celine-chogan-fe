@@ -1,9 +1,11 @@
 <script>
 import Button from "../../components/reusable/Button.vue";
+import Tiptap from "../../components/reusable/Tiptap.vue";
 import axios from "axios";
+
 export default {
   name: "DashBoard",
-  components: { Button },
+  components: { Button, Tiptap },
   data() {
     return {
       login: false,
@@ -198,7 +200,7 @@ export default {
                 border-b border-l border-[#E8E8E8]
               "
             >
-              {{ formatNews(n.description) }}
+              <Tiptap :data="n.description" />
             </td>
             <td
               class="

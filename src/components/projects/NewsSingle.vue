@@ -1,6 +1,8 @@
 <script>
+import Tiptap from "../reusable/Tiptap.vue";
 export default {
   props: ["news"],
+  components: { Tiptap },
 };
 </script>
 
@@ -44,8 +46,9 @@ export default {
           text-lg text-ternary-dark
           dark:text-ternary-light
         "
-        >{{ news.description }}</span
       >
+        <Tiptap :data="news.description"
+      /></span>
     </div>
   </router-link>
 </template>

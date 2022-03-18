@@ -1,6 +1,39 @@
 <script>
 import Button from "../reusable/Button.vue";
-export default { components: { Button } };
+import axios from "axios";
+import Editor from "@tinymce/tinymce-vue";
+export default {
+  components: { Button, Editor },
+  data() {
+    return {
+      name: "",
+      email: "",
+      subject: "",
+      text: "",
+    };
+  },
+  methods: {
+    sendMessage() {
+      axios
+        .post(this.$store.state.url + "api/mailer/message", {
+          name: this.name,
+          email: this.email,
+          subject: this.subject,
+          text: this.text,
+        })
+        .then((res) => {
+          this.message = "commande bien envoyé";
+          res;
+          console.log("ça marche");
+        })
+        .catch((err) => {
+          this.message = "erreur : commande non envoyé";
+          err;
+          console.log("erreur");
+        });
+    },
+  },
+};
 </script>
 
 <template>
@@ -29,7 +62,7 @@ export default { components: { Button } };
       >
         Formulaire de contact
       </p>
-      <form action="#" class="font-general-regular space-y-7">
+      <form :action="sendMessage" class="font-general-regular space-y-7">
         <div>
           <label
             class="block text-lg text-primary-dark dark:text-primary-light mb-2"
@@ -53,6 +86,7 @@ export default { components: { Button } };
               text-md
             "
             id="name"
+            v-model="name"
             name="name"
             type="text"
             required=""
@@ -86,6 +120,7 @@ export default { components: { Button } };
             name="email"
             type="text"
             required=""
+            v-model="email"
             placeholder="Votre Email"
             aria-label="Email"
           />
@@ -115,6 +150,7 @@ export default { components: { Button } };
             id="sujet"
             name="sujet"
             type="text"
+            v-model="subject"
             required=""
             placeholder="Votre sujet"
             aria-label="Sujet"
@@ -127,28 +163,23 @@ export default { components: { Button } };
             for="sujet"
             >Message</label
           >
-          <textarea
-            class="
-              w-full
-              px-5
-              py-2
-              border border-gray-300
-              dark:border-primary-dark
-              border-opacity-50
-              text-primary-dark
-              dark:text-secondary-light
-              bg-ternary-light
-              dark:bg-ternary-dark
-              rounded-md
-              shadow-sm
-              text-md
-            "
-            id="message"
-            name="message"
-            cols="14"
-            rows="6"
-            aria-label="Message"
-          ></textarea>
+          <Editor
+            api-key="ptfhyceukvseclnx08on1nefttte7ow6l4e52mjhju7trlo7"
+            :init="{
+              height: 500,
+              menubar: false,
+              plugins: [
+                'advlist autolink lists link image charmap print preview anchor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table paste code help wordcount',
+              ],
+              toolbar:
+                'undo redo | formatselect | bold italic backcolor | \
+           alignleft aligncenter alignright alignjustify | \
+           bullist numlist outdent indent | removeformat | help',
+            }"
+            v-model="text"
+          />
         </div>
 
         <div>

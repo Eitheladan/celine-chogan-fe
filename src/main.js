@@ -7,6 +7,9 @@ import './assets/css/app.css';
 import BackToTop from 'vue-backtotop';
 import store from './store';
 
+import MediumEditor from 'vuejs-medium-editor';
+createApp(App).component('medium-editor', MediumEditor);
+
 const feather = require('feather-icons');
 feather.replace();
 

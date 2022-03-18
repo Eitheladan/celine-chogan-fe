@@ -22,7 +22,7 @@ export default {
   methods: {
     sendCommande() {
       axios
-        .post(this.$store.state.url + "/mailer", {
+        .post(this.$store.state.url + "api/mailer", {
           name: this.name,
           email: this.email,
           from: this.from,
