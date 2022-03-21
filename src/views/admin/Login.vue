@@ -190,7 +190,7 @@ export default {
     },
     login() {
       axios
-        .post(this.$store.state.url + "/user/login", {
+        .post(this.$store.state.url + "api/user/login", {
           email: this.email,
           password: this.password,
         })
