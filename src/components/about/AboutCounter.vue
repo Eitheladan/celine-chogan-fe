@@ -8,7 +8,7 @@ export default {
     return {
       experienceTitle: "Années d'expérience",
       feedbackTitle: "Retour positif",
-      projectsTitle: "Produits vendus",
+      productsTitle: "Produits vendus",
     };
   },
 };
@@ -75,7 +75,7 @@ export default {
         </span>
       </div>
 
-      <!-- Projects completed counter -->
+      <!-- Products sold counter -->
       <div class="mb-20 sm:mb-0">
         <counter
           ref="counter"
@@ -94,7 +94,7 @@ export default {
           "
         />
         <span class="block text-md text-ternary-dark dark:text-ternary-light">
-          {{ projectsTitle }}
+          {{ productsTitle }}
         </span>
       </div>
     </div>

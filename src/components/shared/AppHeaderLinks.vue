@@ -36,7 +36,7 @@ export default {
         mb-2
         sm:py-2
       "
-      aria-label="Projects"
+      aria-label="news"
       >Actualités</router-link
     >
     <router-link

@@ -167,7 +167,7 @@ export default {
       <div
         class="hidden sm:flex justify-between items-center flex-col md:flex-row"
       >
-        <!-- Hire me button -->
+        <!-- Commander button -->
         <div class="hidden md:block">
           <Button
             title="Commander"
@@ -184,7 +184,7 @@ export default {
               duration-300
             "
             @click="showModal()"
-            aria-label="Hire Me Button"
+            aria-label="Commander"
           />
         </div>
 

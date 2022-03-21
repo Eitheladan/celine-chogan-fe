@@ -45,7 +45,7 @@ export default {
   <div class="container mx-auto">
     <div class="mt-10 sm:mt-20 flex justify-center">
       <router-link
-        to="/addnews"
+        to="/admin/addnews"
         class="
           font-general-medium
           flex
@@ -213,7 +213,7 @@ export default {
                 border-b border-l border-[#E8E8E8]
               "
             >
-              <router-link :to="'/updatenews/' + n._id">
+              <router-link :to="'/admin/updatenews/' + n._id">
                 <button
                   class="
                     hover:shadow-xl

@@ -2,7 +2,7 @@
 import feather from "feather-icons";
 import Tiptap from "../components/reusable/Tiptap.vue";
 export default {
-  name: "Projects",
+  name: "News",
   components: { Tiptap },
   data() {
     return {};

@@ -8,7 +8,7 @@ export default {
 
 <template>
   <router-link
-    :to="'/projects/single-project/' + news._id"
+    :to="'/news/single-news/' + news._id"
     class="
       rounded-xl
       shadow-lg
@@ -19,7 +19,7 @@ export default {
       bg-secondary-light
       dark:bg-ternary-dark
     "
-    aria-label="Single Project"
+    aria-label="Single News"
   >
     <div>
       <img

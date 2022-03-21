@@ -122,7 +122,7 @@ export default {
     <div class="w-full md:w-2/3 text-right float-right">
       <img
         @click="showModal()"
-        class="rounded-lg"
+        class="chogan rounded-lg"
         style="margin: 0 auto"
         v-if="theme === 'light'"
         src="@/assets/images/parfum_chogan.jpg"
@@ -131,39 +131,27 @@ export default {
       <img
         @click="showModal()"
         v-else
-        class="rounded-lg"
+        class="chogan rounded-lg"
         src="@/assets/images/parfum_chogan.jpg"
         alt="Parfum"
       />
     </div>
   </section>
   <transition name="fade">
-    <div v-show="modal" class="font-general-regular fixed inset-0 z-30">
+    <div v-show="modal" class="font-general-regular absolute inset-0 z-30">
       <!-- Modal body background as backdrop -->
       <div
         v-show="modal"
         @click="showModal()"
-        class="
-          bg-filter bg-black bg-opacity-50
-          fixed
-          inset-0
-          w-full
-          h-full
-          z-20
-        "
+        class="bg-filter bg-black bg-opacity-50 absolute inset-0 z-20"
       ></div>
       <!-- Modal content -->
-      <main class="flex flex-col items-center justify-center h-full w-full">
+      <main class="flex flex-col items-center justify-center">
         <transition name="fade-up-down">
           <div v-show="modal" class="modal-wrapper flex items-center z-30">
             <div
               class="
                 modal
-                max-w-md
-                mx-5
-                xl:max-w-xl
-                lg:max-w-xl
-                md:max-w-xl
                 bg-secondary-light
                 dark:bg-primary-dark
                 max-h-screen
@@ -193,33 +181,10 @@ export default {
               </div>
               <div class="modal-body p-5 w-full h-full">
                 <img
-                  class="rounded-lg"
+                  class="modalChogan rounded-lg"
                   style="margin: 0 auto"
-                  src="@/assets/images/parfum.jpg"
+                  src="@/assets/images/parfum_chogan.jpg"
                   alt="Parfum"
-                />
-              </div>
-              <div
-                class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
-              >
-                <Button
-                  title="Close"
-                  class="
-                    px-4
-                    sm:px-6
-                    py-2
-                    bg-gray-600
-                    text-primary-light
-                    hover:bg-ternary-dark
-                    dark:bg-gray-200
-                    dark:text-secondary-dark
-                    dark:hover:bg-primary-light
-                    rounded-md
-                    focus:ring-1 focus:ring-indigo-900
-                    duration-500
-                  "
-                  @click="showModal()"
-                  aria-label="Close Modal"
                 />
               </div>
             </div>
@@ -233,5 +198,11 @@ export default {
 <style scoped>
 img {
   margin: 0 auto;
+}
+.chogan {
+  cursor: zoom-in;
+}
+.modal {
+  overflow-y: scroll;
 }
 </style>

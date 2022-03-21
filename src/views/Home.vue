@@ -1,6 +1,6 @@
 <script>
 import AppBanner from "@/components/shared/AppBanner";
-import NewsGrid from "../components/projects/NewsGrid.vue";
+import NewsGrid from "../components/news/NewsGrid.vue";
 
 export default {
   name: "Home",

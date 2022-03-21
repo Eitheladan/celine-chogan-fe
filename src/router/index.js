@@ -37,28 +37,28 @@ const routes = [{
 		},
 	},
 	{
-		path: '/projects/single-project/:id',
-		name: 'Single Project',
+		path: '/news/single-news/:id',
+		name: 'Single News',
 		// route level code-splitting
-		// this generates a separate chunk (projects.[hash].js) for this route
+		// this generates a separate chunk (news.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(
-				/* webpackChunkName: "projects" */
-				'../views/SingleProject.vue'
+				/* webpackChunkName: "news" */
+				'../views/SingleNews.vue'
 			),
 		meta: {
-			title: 'Céline - News',
+			title: 'Céline - La News',
 		},
 	},
 	{
 		path: '/contact',
 		name: 'Contact',
 		// route level code-splitting
-		// this generates a separate chunk (projects.[hash].js) for this route
+		// this generates a separate chunk (news.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import( /* webpackChunkName: "projects" */ '../views/Contact.vue'),
+			import( /* webpackChunkName: "news" */ '../views/Contact.vue'),
 		meta: {
 			title: 'Céline - Contact',
 		},
@@ -88,7 +88,7 @@ const routes = [{
 		},
 	},
 	{
-		path: '/addnews',
+		path: '/admin/addnews',
 		name: 'CreateNews',
 		// route level code-splitting
 		// this generates a separate chunk (about.[hash].js) for this route
@@ -100,7 +100,7 @@ const routes = [{
 		},
 	},
 	{
-		path: '/updatenews/:id',
+		path: '/admin/updatenews/:id',
 		name: 'UpdateNews',
 		// route level code-splitting
 		// this generates a separate chunk (about.[hash].js) for this route

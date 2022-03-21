@@ -5,8 +5,6 @@ export default {
   data: () => {
     return {
       newsHeading: "Dernières Actualités",
-      selectedCategory: "",
-      searchProject: "",
     };
   },
 
@@ -16,9 +14,9 @@ export default {
 </script>
 
 <template>
-  <!-- Projects grid -->
+  <!-- News grid -->
   <section class="pt-10 sm:pt-14">
-    <!-- Projects grid title -->
+    <!-- News grid title -->
     <div class="text-center">
       <p
         class="
