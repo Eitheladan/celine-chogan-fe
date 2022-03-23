@@ -31,6 +31,8 @@ export default {
         document
           .getElementsByTagName("html")[0]
           .classList.add("overflow-y-hidden");
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
         this.modal = true;
       }
     },
@@ -143,7 +145,7 @@ export default {
       <div
         v-show="modal"
         @click="showModal()"
-        class="bg-filter bg-black bg-opacity-50 absolute inset-0 z-20"
+        class="bg-filter bg-black bg-opacity-50 absolute inset-0 z-20 h-200"
       ></div>
       <!-- Modal content -->
       <main class="flex flex-col items-center justify-center">
@@ -182,7 +184,7 @@ export default {
               <div class="modal-body p-5 w-full h-full">
                 <img
                   class="modalChogan rounded-lg"
-                  style="margin: 0 auto"
+                  style="margin: auto auto"
                   src="@/assets/images/parfum_chogan.jpg"
                   alt="Parfum"
                 />
