@@ -11,6 +11,7 @@ export default {
       description: "",
       selectedFile: "",
       nameFile: "",
+      message: "",
     };
   },
   mounted() {
@@ -29,6 +30,8 @@ export default {
       console.log(this.description);
       formData.set("description", this.description);
       console.log(formData);
+      let user = JSON.parse(localStorage.getItem("user"));
+      console.log(user.token);
       try {
         await axios.post(this.$store.state.url + "api/news/create", formData);
         this.message = "Actualité créé !!";
