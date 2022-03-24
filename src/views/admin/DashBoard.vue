@@ -14,9 +14,8 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$store.state.user);
     this.$store.dispatch("getNewsAction");
-    // vérification qui vérifie si la personne est autorisé à accéder à la page
+    // vérification si la personne est autorisé à accéder à la page
     if (this.$store.state.login === false) {
       this.$router.push("/");
     }
@@ -65,6 +64,29 @@ export default {
         aria-label="Ajout Actualité"
       >
         <Button title="Ajout Actualité" />
+      </router-link>
+      <router-link
+        to="/admin/updateinfos/623c3bc66b237e2061e14add"
+        class="
+          ml-5
+          font-general-medium
+          flex
+          items-center
+          px-6
+          py-3
+          rounded-lg
+          shadow-lg
+          hover:shadow-xl
+          bg-indigo-500
+          hover:bg-indigo-600
+          focus:ring-1 focus:ring-indigo-900
+          text-white text-lg
+          sm:text-xl
+          duration-300
+        "
+        aria-label="update Infos"
+      >
+        <Button title="update Infos" />
       </router-link>
     </div>
     <div>
@@ -268,6 +290,6 @@ export default {
 
 <style scoped>
 table {
-  margin-top: 50px;
+  margin: 50px auto;
 }
 </style>

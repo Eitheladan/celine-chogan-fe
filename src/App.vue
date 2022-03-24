@@ -15,7 +15,8 @@ export default {
   },
   created() {
     this.$store.dispatch("getNewsAction");
-    this.$store.dispatch("getUserInfos");
+    this.$store.dispatch("getUserInfosAction");
+    this.$store.dispatch("getAdminInfosAction");
   },
   mounted() {
     feather.replace();

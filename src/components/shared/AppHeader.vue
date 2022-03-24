@@ -17,28 +17,6 @@ export default {
       isOpen: false,
       theme: "",
       modal: false,
-      categories: [
-        {
-          id: 1,
-          value: "web",
-          name: "Web Application",
-        },
-        {
-          id: 2,
-          value: "mobile",
-          name: "Mobile Application",
-        },
-        {
-          id: 3,
-          value: "ui-ux",
-          name: "UI/UX Design",
-        },
-        {
-          id: 4,
-          value: "branding",
-          name: "Branding & Anim",
-        },
-      ],
     };
   },
 
@@ -169,7 +147,27 @@ export default {
       >
         <!-- Commander button -->
         <div class="hidden md:block">
+          <router-link to="/admin">
+            <Button
+              v-if="$store.state.login === true"
+              title="Admin"
+              class="
+                px-4
+                py-2.5
+                description-white
+                text-white
+                tracking-wider
+                bg-indigo-500
+                hover:bg-indigo-600
+                focus:ring-1 focus:ring-indigo-900
+                rounded-lg
+                duration-500
+              "
+              aria-label="Admin"
+            />
+          </router-link>
           <Button
+            v-if="$store.state.login === false"
             title="Commander"
             class="
               text-md
@@ -210,7 +208,6 @@ export default {
     <CommandeModal
       :showModal="showModal"
       :modal="modal"
-      :categories="categories"
       aria-modal="Hire Me Modal"
     />
   </nav>

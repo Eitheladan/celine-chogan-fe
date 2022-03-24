@@ -1,18 +1,9 @@
 <script>
+import Tiptap from "../reusable/Tiptap.vue";
 export default {
-  setup() {
-    return {
-      bios: [
-        {
-          id: 1,
-          bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: 2,
-          bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-      ],
-    };
+  components: { Tiptap },
+  data() {
+    return {};
   },
 };
 </script>
@@ -27,8 +18,8 @@ export default {
     <!-- About details -->
     <div class="w-full sm:w-4/6 text-left">
       <p
-        v-for="bio in bios"
-        :key="bio.id"
+        v-for="i in $store.state.adminInfos"
+        :key="i._id"
         class="
           font-general-regular
           mb-4
@@ -37,7 +28,7 @@ export default {
           text-lg
         "
       >
-        {{ bio.bio }}
+        <Tiptap :data="i.infos" />
       </p>
     </div>
   </div>

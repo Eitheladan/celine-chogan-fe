@@ -42,7 +42,7 @@ export default {
       console.log(formData);
       try {
         await axios.put(
-          "http://localhost:3030/api/news/update/" + id,
+          this.$store.state.url + "api/news/update/" + id,
           formData
         );
         this.selectedFile = "";

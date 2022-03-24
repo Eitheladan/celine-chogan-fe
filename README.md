@@ -21,7 +21,7 @@ npm install
 3. ##### Lancer le server local `http://localhost:8080`:
 
 ```
-npm run serve
+npm start
 ```
 
 4. ##### Pour passer en mode Admin `http://localhost:8080/admin`:

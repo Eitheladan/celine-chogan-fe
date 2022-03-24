@@ -35,7 +35,6 @@ export default {
           :endAmount="4"
           :duration="1"
           :autoinit="true"
-          @finished="alert(`Counting finished!`)"
           class="
             font-general-medium
             text-4xl
@@ -60,7 +59,6 @@ export default {
           :duration="2"
           suffix="%"
           :autoinit="true"
-          @finished="alert(`Counting finished!`)"
           class="
             font-general-medium
             text-4xl
@@ -83,7 +81,6 @@ export default {
           :endAmount="253"
           :duration="2"
           :autoinit="true"
-          @finished="alert(`Counting finished!`)"
           class="
             font-general-medium
             text-4xl

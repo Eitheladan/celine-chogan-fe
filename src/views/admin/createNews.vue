@@ -174,11 +174,28 @@ export default {
             v-model="description"
           />
         </div>
-
         <div>
+          <router-link to="/admin">
+            <Button
+              title="Annulé"
+              class="
+                px-4
+                py-2.5
+                description-white
+                tracking-wider
+                bg-indigo-500
+                hover:bg-indigo-600
+                focus:ring-1 focus:ring-indigo-900
+                rounded-lg
+                duration-500
+              "
+              aria-label="Annulé"
+            />
+          </router-link>
           <Button
             title="Envoyé"
             class="
+              ml-5
               px-4
               py-2.5
               description-white

@@ -44,7 +44,7 @@ const routes = [{
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(
-				/* webpackChunkName: "news" */
+				/* webpackChunkName: "singlenews" */
 				'../views/SingleNews.vue'
 			),
 		meta: {
@@ -58,7 +58,7 @@ const routes = [{
 		// this generates a separate chunk (news.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import( /* webpackChunkName: "news" */ '../views/Contact.vue'),
+			import( /* webpackChunkName: "contact" */ '../views/Contact.vue'),
 		meta: {
 			title: 'Céline - Contact',
 		},
@@ -70,7 +70,7 @@ const routes = [{
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import( /* webpackChunkName: "about" */ '../views/admin/Login.vue'),
+			import( /* webpackChunkName: "adminlogin" */ '../views/admin/Login.vue'),
 		meta: {
 			title: 'Admin - Login',
 		},
@@ -82,7 +82,7 @@ const routes = [{
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import( /* webpackChunkName: "about" */ '../views/admin/DashBoard.vue'),
+			import( /* webpackChunkName: "dashboard" */ '../views/admin/DashBoard.vue'),
 		meta: {
 			title: 'Admin - DashBoard',
 		},
@@ -94,7 +94,7 @@ const routes = [{
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import( /* webpackChunkName: "about" */ '../views/admin/createNews.vue'),
+			import( /* webpackChunkName: "createnews" */ '../views/admin/createNews.vue'),
 		meta: {
 			title: 'Création Actualité',
 		},
@@ -106,9 +106,18 @@ const routes = [{
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () =>
-			import( /* webpackChunkName: "about" */ '../views/admin/updateNews.vue'),
+			import( /* webpackChunkName: "updatenews" */ '../views/admin/updateNews.vue'),
 		meta: {
 			title: 'Mise à jour Actualité',
+		},
+	},
+	{
+		path: '/admin/updateinfos/:id',
+		name: 'UpdateInfos',
+		component: () =>
+			import('../views/admin/updateInfos.vue'),
+		meta: {
+			title: 'Mise à jour Infos Admin',
 		},
 	},
 ];

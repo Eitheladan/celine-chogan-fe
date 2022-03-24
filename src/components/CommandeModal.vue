@@ -3,7 +3,7 @@ import feather from "feather-icons";
 import Button from "./reusable/Button.vue";
 import axios from "axios";
 export default {
-  props: ["showModal", "modal", "categories"],
+  props: ["showModal", "modal"],
   components: { Button },
   data() {
     return {
