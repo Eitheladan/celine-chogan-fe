@@ -7,6 +7,7 @@ export default {
     return {
       theme: "",
       modal: false,
+      slides: 7,
     };
   },
   created() {
@@ -120,8 +121,8 @@ export default {
       </div>
     </div>
 
-    <!-- Banner right illustration -->
-    <div class="w-full md:w-2/3 text-right float-right">
+    <!-- Banner right Caroussel -->
+    <div class="w-full md:w-2/3 text-right float-right shadow-lg rounded-lg">
       <img
         @click="showModal()"
         class="chogan rounded-lg"

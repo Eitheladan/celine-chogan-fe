@@ -38,6 +38,7 @@ export default {
   methods: {
     async updateInfos() {
       let id = this.$route.params.id;
+      console.log(id);
       let infos = {
         infos: this.infos,
         adresse: {
@@ -52,6 +53,7 @@ export default {
           this.$store.state.url + "api/infos/update/" + id,
           infos
         );
+        console.log(infos);
         this.$router.push("/admin/dashboard");
       } catch (err) {
         console.log(err);

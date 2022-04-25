@@ -7,9 +7,6 @@ export default {
       newsHeading: "Dernières Actualités",
     };
   },
-
-  computed: {},
-  methods: {},
 };
 </script>
 

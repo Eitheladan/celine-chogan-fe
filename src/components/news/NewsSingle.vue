@@ -25,7 +25,7 @@ export default {
       <img
         :src="this.$store.state.url + '/' + news.image"
         :alt="news.title"
-        class="rounded-t-xl border-none"
+        class="rounded-l border-none"
       />
     </div>
     <div class="text-center px-4 py-6">
@@ -53,4 +53,9 @@ export default {
   </router-link>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+img {
+  width: 540px;
+  height: 330px;
+}
+</style>
