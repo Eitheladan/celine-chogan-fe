@@ -15,7 +15,7 @@ export default {
       hover:shadow-xl
       cursor-pointer
       mb-10
-      sm:mb-0
+      md:mb-0
       bg-secondary-light
       dark:bg-ternary-dark
     "

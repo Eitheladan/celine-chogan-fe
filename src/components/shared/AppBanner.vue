@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template>
-  <section class="flex flex-col sm:justify-between sm:flex-row mt-12 sm:mt-10">
+  <section class="flex flex-col md:justify-between md:flex-row mt-12 md:mt-10">
     <!-- Banner left contents -->
     <div class="w-full md:w-1/3 text-left">
       <img
@@ -57,7 +57,7 @@ export default {
           md:text-3xl
           xl:text-4xl
           text-center
-          sm:text-left
+          md:text-left
           text-ternary-dark
           dark:text-primary-light
           uppercase
@@ -70,10 +70,10 @@ export default {
           font-general-medium
           mt-2
           text-lg
-          sm:text-xl
+          md:text-xl
           xl:text-2xl
           text-center
-          sm:text-left
+          md:text-left
           leading-none
           text-gray-400
         "
@@ -81,7 +81,7 @@ export default {
         Votre consultante Chogan. Si vous cherchez des produits de qualités au
         prix juste, alors vous êtes sur le bon site.
       </p>
-      <div class="flex justify-center sm:block">
+      <div class="flex justify-center md:block">
         <a
           href="https://www.chogangroup.com/dflip/page_flip.php?doc=1610704336_documents"
           target="_blank"
@@ -90,15 +90,15 @@ export default {
             justify-center
             items-center
             w-36
-            sm:w-48
+            md:w-48
             mt-12
             mb-6
-            sm:mb-0
+            md:mb-0
             text-lg
             border border-indigo-200
             dark:border-ternary-dark
             py-2.5
-            sm:py-3
+            md:py-3
             shadow-lg
             rounded-lg
             bg-indigo-50
@@ -112,9 +112,9 @@ export default {
         >
           <i
             data-feather="arrow-down-circle"
-            class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
+            class="ml-0 md:ml-1 mr-2 md:mr-3 w-5 md:w-6 duration-100"
           ></i>
-          <span class="text-sm sm:text-lg font-general-medium duration-100"
+          <span class="text-sm md:text-lg font-general-medium duration-100"
             >Catalogue</span
           ></a
         >

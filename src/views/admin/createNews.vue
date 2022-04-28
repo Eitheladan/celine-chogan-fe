@@ -2,6 +2,7 @@
 import Button from "../../components/reusable/Button.vue";
 import axios from "axios";
 import Editor from "@tinymce/tinymce-vue";
+import authHeader from "../../service/auth";
 export default {
   components: { Button, Editor },
   data() {
@@ -27,7 +28,9 @@ export default {
       formData.set("title", this.title);
       formData.set("description", this.description);
       try {
-        await axios.post(this.$store.state.url + "api/news/create", formData);
+        await axios.post(this.$store.state.url + "api/news/create", formData, {
+          headers: authHeader(),
+        });
         this.message = "Actualité créé !!";
         this.selectedFile = "";
         this.title = "";

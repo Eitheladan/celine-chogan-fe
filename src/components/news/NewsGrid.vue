@@ -12,14 +12,14 @@ export default {
 
 <template>
   <!-- News grid -->
-  <section class="pt-10 sm:pt-14">
+  <section class="pt-10 md:pt-14">
     <!-- News grid title -->
     <div class="text-center">
       <p
         class="
           font-general-semibold
           text-2xl
-          sm:text-5xl
+          md:text-5xl
           font-semibold
           mb-2
           text-ternary-dark
@@ -30,7 +30,7 @@ export default {
       </p>
     </div>
     <!-- News single -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 md:gap-10">
       <div v-for="news in this.$store.state.news.slice(0, 3)" :key="news.id">
         <NewsSingle :news="news" />
       </div>

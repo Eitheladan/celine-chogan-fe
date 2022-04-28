@@ -2,7 +2,7 @@
 import Button from "../../components/reusable/Button.vue";
 import Tiptap from "../../components/reusable/Tiptap.vue";
 import axios from "axios";
-
+import authHeader from "../../service/auth";
 export default {
   name: "DashBoard",
   components: { Button, Tiptap },
@@ -32,7 +32,9 @@ export default {
     // fonction pour supprimer une news
     deleteNews(id) {
       axios
-        .delete(this.$store.state.url + "api/news/" + id)
+        .delete(this.$store.state.url + "api/news/" + id, {
+          headers: authHeader(),
+        })
         .then(() => this.$router.push("/admin"))
         .catch();
     },

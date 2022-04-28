@@ -2,6 +2,7 @@
 import Button from "../../components/reusable/Button.vue";
 import axios from "axios";
 import Editor from "@tinymce/tinymce-vue";
+import authHeader from "../../service/auth";
 export default {
   components: { Button, Editor },
   data() {
@@ -33,17 +34,17 @@ export default {
     async updateNews() {
       let id = this.$route.params.id;
       const formData = new FormData();
-      console.log(this.selectedFile);
       formData.append("file", this.selectedFile);
-      console.log(this.title);
       formData.set("title", this.title);
-      console.log(this.description);
       formData.set("description", this.description);
-      console.log(formData);
+
       try {
         await axios.put(
           this.$store.state.url + "api/news/update/" + id,
-          formData
+          formData,
+          {
+            headers: authHeader(),
+          }
         );
         this.selectedFile = "";
         this.title = "";

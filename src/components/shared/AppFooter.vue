@@ -16,13 +16,13 @@ export default {
           id: 2,
           name: "Twitter",
           icon: "twitter",
-          url: "",
+          url: "https://twitter.com/CMoccatti/",
         },
         {
           id: 3,
           name: "Instagram",
           icon: "instagram",
-          url: "",
+          url: "https://www.instagram.com/choganceline/",
         },
       ],
     };
